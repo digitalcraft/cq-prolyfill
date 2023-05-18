@@ -559,7 +559,7 @@ function parseRules() {
  * @param {CSSRule} rule
  */
 function parseRule(rule) {
-	if (rule.cssRules) {
+	if (rule.length && rule.cssRules) {
 		for (var i = 0; i < rule.cssRules.length; i++) {
 			parseRule(rule.cssRules[i]);
 		}
